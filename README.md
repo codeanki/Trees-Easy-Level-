@@ -1,2 +1,2 @@
 # Trees-Easy-Level-
-Consists of all Codestudio Trees asy Level Programs
+Consists of all Codestudio Trees Easy Level Programs

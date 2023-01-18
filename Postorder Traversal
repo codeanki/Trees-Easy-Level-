@@ -9,6 +9,6 @@ answer.push_back(root->data);
 
 vector<int> postorderTraversal(TreeNode<int>*root){
 vector<int> answer;
-inorder(root, answer);
+postorder(root, answer);
 return answer;
 }

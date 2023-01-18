@@ -1,0 +1,21 @@
+bool identicalTrees(TreeNode<int> *t, TreeNMode<int> *s){
+if(t == NULL && s == NULL){
+return true;
+}
+if(t == NULL || s == NULL){
+return false;
+}
+return (t->val == s->val && identicalTrees(t->left, s->left) && identicalTrees(t->right, s->right));
+}
+
+bool isSubtree(TreeNode<int> *T, TreeNode<int> *S){
+if(S == NULL){
+return true;
+}if(T == NULL){
+return false;
+}if(identicalTrees(T,S)){
+return true;
+}
+
+return isSubTree(T->left, S) || isSubTree(T->right, S);
+}

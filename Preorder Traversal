@@ -1,0 +1,15 @@
+void preorder(TreeNode<int> *root, vector<int> &answer){
+if(root == NULL){
+return;
+}
+answer.push_back(root->data);
+preorder(root->left, answer);
+preorder(root->right, answer);
+}
+
+
+vector<int> getpreorderTraversal(TreeNode<int> *root){
+   vector<int> answer;
+   preorder(root, answer);
+   return answer;
+   }

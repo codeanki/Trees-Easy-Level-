@@ -1,0 +1,49 @@
+vector<int> answer;
+void preorder(BinaryTreeNode<int>*root){
+if(root == NULL){
+return;
+}
+answer.push_back(root->data);
+preorder(root->left);
+preorder(root->right);
+}
+vector<int> preorderTraversal(TreeNodeint*root){
+answer.clear();
+preorder(root);
+return answer;
+}
+
+void inorder(TreeNode<int>*root){
+if(root == NULL){
+return;
+}
+inorder(root->left);
+answer.push_back(root->data);
+inorder(root->right);
+}
+vector<int> inorderTraversal(BinaryTreeNode<int>*root){
+answer.clear();
+inorder(root);
+return answer;
+}
+
+void postorder(BinaryTreeNode<int>*root){
+if(root == NULL){
+return;
+}
+postorder(root->left);
+postorder(root->right);
+answer.push_back(root->data);
+}
+
+vector<vector<int>> getTreeTraversal9BinaryTreeNode<int>*root){
+
+vector<vector<int>>result(3);
+
+result[0] = getPreorderTraversal(root);
+result[1] = getInorderTraversal(root);
+result[2] = getPostorderTraversal(root);
+
+
+return result;
+}

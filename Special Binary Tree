@@ -1,0 +1,9 @@
+bool isSpecialBinaryTree(BinaryTreeNode<int>*root){
+if(root == NULL){
+return true;
+}if(root->left == NULL && root->right == NULL){
+return true;
+}if(root->left!=NULL && root->right!=NULL){
+return isSpecialBinaryTree(root->left) && isSpecialBinaryTree(root->right);
+}
+}

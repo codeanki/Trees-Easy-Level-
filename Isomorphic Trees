@@ -1,0 +1,11 @@
+bool checkTree(BinaryTreeNode<int>*tree1, BinaryTreeNode<int>*tree2){
+if(tree1 == NULL && tree2 == NULL){
+return true;
+}if(tree1 == NULL || tree2 == NULL){
+return false;
+}if(tree1->data!=tree2->data){
+return false;
+}
+
+return (checkTree(tree1->left, tree2->left) && checkTree(tree1->right, tree2->right)) ||  (checkTree(tree1->left, tree2->right) && checkTree(tree1->right, tree2->left));
+}

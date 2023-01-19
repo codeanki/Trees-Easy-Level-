@@ -1,0 +1,12 @@
+int maxDepth(BinaryTreeNode<int>*root){
+if(root == NULL){
+rerturn 0;
+}
+int leftdepth = maxDepth(root->left);
+int rightdepth = maxDepth(root->right);
+if(leftdepth > rightdepth){
+return leftdepth + 1;
+}else{
+return rightdepth + 1;
+}
+}

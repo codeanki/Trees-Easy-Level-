@@ -1,0 +1,6 @@
+int findMaxDepth(TreeNode*root){
+if(root == NULL){
+return 0;
+}
+return max(findMaxDepth(root->left), findMaxDepth(root->right)) + 1;
+}

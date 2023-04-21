@@ -1,6 +1,8 @@
 /*
 Binary Tree Postorder Traversal:
 
+PostOrder: Right SubTree-> Left SubTree-> Root
+
 Given the root of a binary tree, return the postorder traversal of its nodes' values.
 
  
